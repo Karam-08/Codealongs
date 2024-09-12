@@ -1,0 +1,71 @@
+<!--Let's start with a quote:
+By default, HTML is accessible, if used correctly.
+CSS can also be used to make web pages more, or less, accessible.
+Chemical Formulae: H2O (Water), C2H6O (Ethanol).
+Dates: December 25th 2019 (Christmas Day), November 2nd 2019 (Día de los Muertos).
+-->
+<!-- SUPERTEXT SUBTEXT -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Semantics + Attributes</title>
+    </head>
+    <body>
+        <h1>Advanced text semantics</h1>
+        <p>Lets start with a quote.</p>
+        <blockquote>
+            By default,<abbr title="Hyper Text Markup Language">HTML</abbr> is accessible, if used correctly </br>
+            <abbr title="Cascading Style Sheets">CSS</abbr> can also be used to make web pages more or less accessible
+        </blockquote>
+        <p>
+            <h3>Chemical Formula</h3>
+            <dl>
+                <dt>H<sub>2</sub>O</dt>
+                <dd>Water</dd>
+                <dt>C<sub>2</sub>H<sub>6</sub>O</dt>
+                <dd>Ethanol</dd>
+            </dl>
+        </p>
+
+        <p>
+            <h3>Dates:</h3>
+            <dl>
+                <dt>September 11<sup>th</sup>2001</dt>
+                <dd>A tragic day in American History.</dd>
+                <dt>December 25<sup>th</sup></dt>
+                <dd>The best holiday of the year!</dd>
+                <dt>November 2<sup>nd</sup>2019</dt>
+                <dd><span lang="sp">Dia de los Muertos.</span></dd>
+            </dl>
+        </p>
+        <p>You should not use presentational elements like
+            <code>&lt; Font &gt;</code> and <code>&lt;center&gt;</code>.</br>
+            In the above Javascript example, <var>para</var> represents a paragraph element</br>
+            Select all the text with <kbd>Ctrl</kbd><kbd>Cmd</kbd><kbd>+<kbd></kbd>A</kbd>
+        </p>
+
+        </body>
+</html>
+
+<code>
+    <pre>$ ping mozilla.org</pre>
+    <samp>PING mozillia.org (63.245.215.20): 56 bytes + 64 bytes fomr 63.241.215.20:
+        icmp_seq=0 ttl=40 time=158/233</samp>
+
+        <p>
+            <span style="font-size: 1">@Copyright</span> 2050
+            by nobody.
+            <hr style="height: 1; background-color: black;">
+        </p>
+        <p>&#128513;</p>
+</code>
+<div id="copyright">@Copyright 2050 by Me.</div>
+<script>
+    var para =document.querySelector('p')
+    para.onclick = function(){
+        alert("STOP CLICKING ME!!")
+    }
+</script>
+
