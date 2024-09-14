@@ -43,7 +43,7 @@ Dates: December 25th 2019 (Christmas Day), November 2nd 2019 (Día de los Muerto
         <p>You should not use presentational elements like
             <code>&lt; Font &gt;</code> and <code>&lt;center&gt;</code>.</br>
             In the above Javascript example, <var>para</var> represents a paragraph element</br>
-            Select all the text with <kbd>Ctrl</kbd><kbd>Cmd</kbd><kbd>+<kbd></kbd>A</kbd>
+            Select all the text with <kbd>Ctrl</kbd>+<kbd>Cmd</kbd><kbd>+<kbd></kbd>A</kbd>
         </p>
 
         </body>
@@ -60,10 +60,53 @@ Dates: December 25th 2019 (Christmas Day), November 2nd 2019 (Día de los Muerto
             <hr style="height: 1; background-color: black;">
         </p>
         <p>&#128513;</p>
+
+        <form action="#">
+            <fieldset>
+                <legend>Username</legend>
+            </fieldset>
+            <label for="name">Name:</label>
+<input type ="text" id="name" name="user.name">
+<fieldset>
+    <legend>Description</legend>
+</fieldset>
+<label for="body">Message:</label>
+<textarea name="user.message" id ="body" cols="30" rows="10" placeholder="Type Here"></textarea>
+<button type ="submit">Submit</button>
+<button type ="reset">Reset</button>
+<br>
+<label for="myfile">Select an image:</label>
+<input type="file" id="myfile" name="myfile" accept = ".jpeg, .jpg">
+<br>
+<input type="checkbox" id="Symptom1" name="Symptom1" value="Runny Nose">
+<label for="Symptom1"> I have a Runny Nose</label><br>
+<input type="checkbox" id="Symptom2" name="Symptom2" value="Cough">
+<label for="Symptom2"> I have a Cough</label><br>
+<input type="checkbox" id="Symptom3" name="Symptom3" value="Muscle Ache">
+<label for="Symptom3"> I have Muscle Aches</label><br>
+<input type="checkbox" id="Symptom4" name="Symptom4" value = Sneezing>
+<label for="Symptom4">I am Sneezing a lot</label>
+<br>
+<label for="pwd">Password:</label>
+<input type="password" id="pwd" name="pwd">
+<p>What is your age range?</p>
+<input type = "radio" id ="0-12" name = "Preteen" value="Preteen">
+<label for="Preteen">Preteen</label>
+<input type = "radio" id ="13-20" name = "Pre-Adult" value="Pre-Adult">
+<label for="Pre-Adult">Pre-Adult</label>
+<input type = "radio" id ="21+" name = "Adult" value="Adult">
+<label for="Adult">Adult</label>
+        </form>
+
+
+        <!-- 
+        OR
+        <input type="button"> This is also a button
+        -->
 </code>
 <div id="copyright">@Copyright 2050 by Me.</div>
 <script>
-    var para =document.querySelector('p')
+    var para=document.querySelector('p')
     para.onclick = function(){
         alert("STOP CLICKING ME!!")
     }
