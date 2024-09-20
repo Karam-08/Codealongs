@@ -1,0 +1,81 @@
+.header{
+    font-size: xx-large;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:limegreen;
+    background-color:black;
+}
+
+.teenTiny{
+    font-size: 1px;    
+}
+
+.small{
+    font-size: 20%
+}
+
+#navigation{
+    color: aqua;
+    text-decoration: underline dotted black;
+}
+
+#testimonials{
+    color: orange;
+}
+
+.tester{
+    color: purple;
+}
+
+a{
+    color: blue
+}
+a[href]{
+    color: purple
+}
+a[href="west-Mec.org"]
+{color: orange;
+
+}
+
+a:hover{
+    color: red;
+}
+
+a:visited{
+    color: royalblue;
+}
+
+.show:hover{
+    width: 100%;
+    height: 100%;
+}
+
+    p::first-letter{
+        font-size: larger;
+        font-family: fantasy;
+    }
+
+a[href="Google.com"]
+{
+    color: red;
+}
+
+li > a[href="Wikipedia.com"]
+{
+    color: grey;
+}
+
+a[href="W3schools.com"]
+{
+    color: limegreen;
+}
+
+a[href="Mdn.com"]{
+    color: lightblue;
+}
+
+a[href="github.com"]
+{
+    color: green;
+}
