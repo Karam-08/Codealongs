@@ -56,26 +56,5 @@ a:visited{
         font-family: fantasy;
     }
 
-a[href="Google.com"]
-{
-    color: red;
-}
 
-li > a[href="Wikipedia.com"]
-{
-    color: grey;
-}
 
-a[href="W3schools.com"]
-{
-    color: limegreen;
-}
-
-a[href="Mdn.com"]{
-    color: lightblue;
-}
-
-a[href="github.com"]
-{
-    color: green;
-}

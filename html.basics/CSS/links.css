@@ -1,0 +1,40 @@
+a[href="https://google.com"]
+{
+    color: red;
+    text-decoration: none;
+}
+
+a[href="https://wikipedia.com"]
+{
+    color: grey;
+    text-decoration: none;
+}
+
+a[href="https://w3schools.com"]
+{
+    color: limegreen;
+    text-decoration: none;
+}
+
+a[href="https://Mdn.com"]
+{
+    text-decoration: none;
+    color: lightblue;
+    text-decoration: none;
+}
+
+a[href="https://github.com"]
+{
+    color: green;
+    text-decoration: none;
+}
+
+a::after
+{
+    content: ".com";
+}
+
+p::first-letter{
+    font-size: larger;
+    font-family: fantasy;
+}
