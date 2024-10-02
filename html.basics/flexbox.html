@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex is the best</title>
+    <style>
+        .flex-container{
+            display: flex;
+            background-color: orange;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: xx-large;
+            justify-content: space-around;
+            align-items: start;
+            align-content: flex-start;
+            height: 900px;
+        }
+        .flex-container > div{
+            background-color: black;
+            color: white;
+            margin: 10px;
+            padding: 15px;
+        }
+        .box{
+            height: 100px;
+            /* width: 100%; */
+        }
+        .box1{
+            order:3;
+        }
+        .box2{
+            order:2;
+        }
+        .box3{
+            order:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="box" style="flex-grow: 1; flex-shrink: 1;">
+            <h1>A</h1>
+        </div>
+        <div class="box" style="flex-grow: 2; flex-shrink: 3;">
+            <h1>B</h1>
+        </div>
+        <div class="box" style="flex-grow: 3; flex-shrink: 3;">
+            <h1>C</h1>
+        </div>
+        <div class="box" style="flex-grow: 4; flex-shrink: 1;">
+            <h1>D</h1>
+        </div>
+        <!-- <div class="box1"> 
+            <img src="./images/cool pattern.jpg" alt="squares">
+        </div>
+        <div class="box2">
+            <img src="./images/illusion.jpg" alt="illusion">
+        </div>
+        <div class="box3">
+            <img src="./images/illusion-2.jpg" alt="squares">-->
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
