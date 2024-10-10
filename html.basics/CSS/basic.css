@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header{
+    background-color: #444;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1, h2{
+    margin-bottom: 10px;
+}
+
+main{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+section{
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #444;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Possible media features: 
+width | min-width | max-width | height | min-height | max-height | device-width | min-device-width | max-device-width | device-height | min-device-height | max-device-height | aspect-ratio | min-aspect-ratio | max-aspect-ratio | device-aspect-ratio | min-device-aspect-ratio | max-device-aspect-ratio | color | min-color | max-color | color-index | min-color-index | max-color-index | monochrome | min-monochrome | max-monochrome | resolution | min-resolution | max-resolution | scan | grid */
+
+    @media(max-width: 600px;){
+        #care{
+            display: none;
+        }
+    }
+
+    @media (min-width: 850px){
+        *{
+            color: purple;
+        }
+    }
+
+    @media print{
+        body{
+            background-color: white;
+            color: black;
+        }
+        section#care, section#breeds{
+            display: none;
+        }
+    }
+
+@media screen and (max-width: 767px){
+    *{
+        color: blue;
+        background-color: yellow;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
