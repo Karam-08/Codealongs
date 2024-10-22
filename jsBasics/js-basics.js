@@ -73,7 +73,7 @@ if("15" === "15"){
 }
 
 let Alive = true
-let year = 2024
+let year = 2020
 
 if(year == 2024){
     if(alive = true){
@@ -99,6 +99,78 @@ else if(82 < $ < 150){
 }
 
 let num = 257
-alert("This is proof")
+// alert("This is proof") //
 console.log("I will live until I'm" + num)
 
+let test1 = "Bored"
+let test2 = "bored"
+
+// console.log(Object.is(test1, test2))
+
+console.log(5 > 4)
+console.log("apple" > "appear")
+console.log("west" < "Went")
+console.log(2 > "12")
+console.log(undefined == null)
+console.log(undefined === null)
+console.log(null == "0")
+
+if(year == 2020) console.log('uh-oh');
+
+if(true)console.log('works')
+if(0)console.log('doesnt work')
+
+let check = "false"
+if(check) console.log('this works too')
+
+let age4 = 24
+let canDrink = console.log((age4 >= 21) ? true : false)
+
+let a = 1
+let b = 3
+
+console.log((a + b < 4) ? 'Below' : 'Over')
+
+let grade = 81
+
+if(grade > 90){
+    console.log('A')
+} else if (grade > 80){
+    console.log('B')
+} else if (grade > 70){
+    console.log('C')
+} else if (grade > 60){
+    console.log('D')
+} else {
+    console.log('You Suck')
+}
+
+let answer = "45"
+switch(answer){
+    case"left":
+        console.log("You're going left")
+        break;
+    case"right":
+        console.log("You're going right")
+        break;
+    default:
+        console.log("You're going forward")
+}
+
+let message1;
+
+let login = "employee"
+switch(login){
+    case "employee":
+        message1 = 'Hello';
+        break;
+    case "director":
+        message1 = 'Greetings';
+        break;
+    case "":
+        message1 = 'No Login';
+        break;
+    default:
+        message1 = '';
+}
+console.log(message1)
