@@ -174,3 +174,96 @@ switch(login){
         message1 = '';
 }
 console.log(message1)
+
+let pen = true
+let paper = true
+let mouse = false
+let keyboard = true
+
+if(pen && paper == true || mouse && keyboard == true){
+    console.log('You can take notes')
+} else {
+    console.log('You cannot take notes')
+}
+
+let allNighter = false
+let didNotStudy = false
+let tooManyGames = false
+let skippedBreakfast = false
+
+if(!allNighter && !tooManyGames && !didNotStudy && !skippedBreakfast){
+    console.log('Bro is locked in fr fr')
+} else {
+    console.log('Bro is so cooked lmao')
+}
+
+let location = null
+let geoLocation;
+
+console.log(geoLocation ?? 'Not a valid geo location')
+let newLocation = location ?? 'Arizona'
+console.log(newLocation)
+
+let number1 = Math.floor(Math.random() * 100)
+let number2 = Math.floor(Math.random() * 100)
+let number3 = Math.floor(Math.random() * 100)
+let number4 = Math.floor(Math.random() * 100)
+let number5 = Math.floor(Math.random() * 100)
+
+console.log(number1 + ',', number2 + ',', number3 + ',', number4 + ',', number5)
+
+for(var i = 10; i > 1; i--){
+    console.log(`This has happened ${i} times`)
+}
+
+for(var i = 5; i < 14; i+= 2){
+    console.log(i)
+}
+
+for(var i = 5; i < 12; i++){
+    console.log(i)
+}
+
+console.log('---------------------')
+
+for(var i = 1; i < 10; i++){
+    console.log("this is nice")
+}
+
+console.log('---------------------')
+
+for(var i = 11; i > 0; i-=2){
+    console.log(i)
+}
+
+let i = 0;
+while(i < 3){
+    console.log(i);
+    i++;
+}
+
+let i = 0;
+do{
+    console.log(i);
+    i++;
+} while (i < 3)
+
+var classes = 12
+
+for(var i = 0; i < classes; i++){
+    if(i==7){
+        console.log("The next frontier")
+        continue
+    }
+    console.log(i)
+    console.log("This should always print")
+}
+
+outer: for(var i = 0; i < 3; i++){
+    for(var j = 0; j < 5; j++){
+        let input = prompt("What is your name?")
+        if(input.length > 0){
+            break outer;
+        }
+    }
+}
