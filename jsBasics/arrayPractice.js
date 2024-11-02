@@ -117,9 +117,7 @@ for(var i = 0; i < stop.length; i++){
 
 var end = (west-east); // 0 - x (how far we west east) = east location. We must make the negative positive however.
 
-if(end == 1){ // If we are only one station away,
-    console.log(-end, "station east") // The grammer is fixed
-}else if(end < 0){ // If we are many stations east,
+if(end < 0){ // If we are many stations east,
     console.log(-end, "stations east") // It tells us that we are x stations east
 }else{ // For the west area,
     console.log("We cannot go west from here.") // I believe you know how to read.
