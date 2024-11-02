@@ -146,11 +146,11 @@ for(var i = 0; i < stop.length; i++){
     }else if(stop[i] === ")"){
         east += 1;
     }
-    if(stop[i] === stop[i+1]){ // If two consective i's are the same (EX: "((" )
+    if(stop[i] === stop[i+1]){ // If two consective i's are the same (EX: "(" "(" )
         i++; // We skip one,
         continue; // and the loop continues.
     }
-}
+} // This works because the loop already added 1 to either east or west.
 
 
 if(west > east){
