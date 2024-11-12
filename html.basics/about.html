@@ -6,6 +6,51 @@
     <title>About other stuff</title>
 </head>
 <body>
-    <h1>This is a test website</h1>
-</body>
+<h1 id = "Title">This is a test website</h1>
+<input type = "text" name = "description" id = "descrip">
+<button ondblclick="" onclick ="changeName('Karam')">Click Here</button>
+<img id = "po" onclick = "swutch()" src="./images/Po.png" alt="po">
+<div class = "container" id = "container"></div>
+    <h1>Greater Than or Less Than</h1>
+    <button id = "less">Less Than</button><button id = "more">Greater Than</button>
+    <p>Enter a number between 1 and 10:</p>
+    <input type = "number" id = "userInput" placeholder = "Your guess here" min = "1" max = "10">
+    <button onclick = "guessNumber()">Guess</button>
+    <div id = "output" class = "output"></div>
+</div>
+<script>
+    let storage = document.getElementById('Title').innerHTML
+        console.log(storage)
+    document.getElementById('Title').textContent = "This is brand new"
+
+    function changeName(name){
+        document.getElementById('Title').textContent = name
+        document.getElementById('Title').style.color = "purple"
+        document.getElementById('Title').style.fontSize = "40px"
+        document.getElementById('Title').style.textDecoration = "underline"
+        document.getElementById('Title').style.fontFamily = "Gill Sans, sans-serif"
+    }
+    function swutch(){
+        let image = document.getElementById('po')
+        image.src = "https://nestflix.fun/img/how-to-ratatwang-your-panda-thumb-1200w.jpg"
+    }
+
+    const randomNumber = Math.floor(Math.random() *10) + 1;
+
+        function guessNumber(){
+            const userGuess = parseInt(document.getElementById("userInput").value);
+            const output = document.getElementById("output");
+
+            if(isNaN(userGuess) || userGuess < 1 || userGuess > 10){
+                output.textContent = "Please enter a valid number between 1 and 10."
+            }else if(userGuess === randomNumber){
+                output.textContent = "Congratulations! You guessed  the correct number!"
+            } else {
+                output.textContent = "Wrong guess. Try again."
+            }
+        }
+
+    console.log(document.getElementById("container").classList)
+    
+</script>
 </html>

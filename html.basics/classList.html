@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Lists</title>
+    <link rel="stylesheet" href="./CSS/classlist.css">
+</head>
+<body>
+    <div id = "lists" class = "first second third">
+        <h1>This is a test zone</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Laborum aperiam recusandae rerum minus repudiandae atque eius dolor quod corrupti esse.
+        </p>
+        <button onclick="remove()">Toggle</button><button onclick = "add()">Add</button>
+        <p></p>
+    </div>
+    <script>
+        const list = document.getElementById('lists').classList;
+        console.log(list);
+
+        function remove(){
+            list.toggle("first")
+        }
+
+        function add(){
+            list.add("fourth")
+        }
+
+        function bruceFinder(){
+            list.contains("Bruce")
+        }
+    </script>
+</body>
+</html>
