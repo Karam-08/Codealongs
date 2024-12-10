@@ -177,7 +177,7 @@ print(favGames.keys()) # All of the keys in the dictionary
 print(favGames.values()) # All of the values in the dictionary
 print(len(favGames))
 
-users = {"Karam": 5558840, "Mom": 6666, "Maryam": 1212958186}
+users = {"Karam": abcd1234, "Mom": efgh5678, "Maryam": ijkl9012}
 user = "starBoy"
 password = "theWeeknd"
 
