@@ -115,12 +115,12 @@ for(var i = 0; i < stop.length; i++){
 } // Var start represents how far east the train is from the starting point.
 // If it goes west (above zero), the code stops the train from going west 
 
-var end = (west-east); // 0 - x (how far we west east) = east location. We must make the negative positive however.
+var end = (west-east); // 0 - x (how far we went east) = east location. We must make the negative positive however.
 
 if(end < 0){ // If we are many stations east,
     console.log(-end, "stations east") // It tells us that we are x stations east
-}else{ // For the west area,
-    console.log("We cannot go west from here.") // I believe you know how to read.
+}else{
+    console.log("We cannot go west from here.")
 }
 
 
