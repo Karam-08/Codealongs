@@ -35,7 +35,7 @@ if (day === 1) {
 //Nested If-Else 3:
 
 let trafficLight = 'green';
-if (trafficLight === 'red') {
+if (trafficLight === 'red')     {
     console.log('Stop');
 } else if (trafficLight === 'yellow') {
     console.log('Slow down');
@@ -78,7 +78,7 @@ if (size === 'S') {
 //Nested If-Else 6:
 
 let browser = 'Chrome';
-if (browser === 'Chrome') {
+if (browser === 'Chrome') { 
     console.log('Fast and popular');
 } else if (browser === 'Firefox') {
     console.log('Privacy-focused');
