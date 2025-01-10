@@ -1,0 +1,16 @@
+nav{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    ul{
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly; 
+        margin: 0; 
+        li{
+            color: yellow;
+        }
+    }
+}

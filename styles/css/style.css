@@ -1,0 +1,71 @@
+ul {
+  background-color: black;
+}
+ul li {
+  color: brown;
+  list-style: none;
+  padding-left: 10px;
+}
+
+nav {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+nav ul {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  margin: 0;
+}
+nav ul li {
+  color: yellow;
+}
+
+body {
+  background-color: darksalmon;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+section {
+  width: 300px;
+  height: 400px;
+  background-color: lightblue;
+  border: 1px black solid;
+  border-radius: 10px;
+  margin: 10px;
+  padding-top: 5px;
+  padding-right: 0px;
+  padding-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+section button {
+  background-color: lightblue;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 25px;
+  margin: 5px;
+  outline: none;
+  font-size: 4rem;
+  font-weight: 700;
+}
+section button:active {
+  background-color: darkorchid;
+  border: 2px solid lightblue;
+}
+section #submit {
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+section #testing {
+  justify-content: flex-start;
+  align-self: flex-start;
+}/*# sourceMappingURL=style.css.map */
