@@ -24,8 +24,29 @@ nav ul li {
   color: yellow;
 }
 
-body {
+.profile, .nudge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 800px;
+  width: 800px;
+  border: 3px solid red;
+  border: 3px solid lightblue;
+}
+
+.dark {
+  background: black;
+  color: white;
+}
+
+.nudge {
+  margin-left: calc(50% - 125px);
+}
+
+.container {
   background-color: darksalmon;
+  color: color-contrast(darksalmon);
   display: flex;
   flex-direction: row;
   justify-content: center;

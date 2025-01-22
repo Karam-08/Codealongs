@@ -16,8 +16,21 @@ $font-size:(
     'large': 4rem
 );
 
-@import './partials/nav.scss';
+@import './partials/list.scss', './partials/nav.scss', './partials/mixin.scss';
 
+.profile{
+    @include flexCenter(column);
+    border: 3px solid $main-color;
+}
+
+.dark{
+    @include themes(true)
+}
+
+.nudge{
+    @extend .profile;
+    margin-left: calc(50% - 125px);
+}
 
 @function size($value){
     @return map-get($map: $font-size, $key: $value);
@@ -27,17 +40,17 @@ $font-size:(
     @return map-get($font-weight, $name);
 }
 //color contrast function
-@function color-contrast($color){
-    $color-brightness: math.round((color.red($color)*299) + color.green($color)*587) + (color.blue($color)*114, 1000);
-    $light-color: math.round((color.red(#fff)*299)+ color.green(#fff)*587) + (color.blue(#fff)*114, 1000);
-
-    @if abs($color-brightness) < math.div($light-color,2){
-        @return hsl(0 0% 100%)
-    }@else{
-        @return hsl(0 100% 0%)
-    }
-}
-body{
+//@function color-contrast($color){
+//    $color-brightness: math.round((color.red($color)*299) + color.green($color)*587) + (color.blue($color)*114, 1000);
+//    $light-color: math.round((color.red(#fff)*299)+ color.green(#fff)*587) + (color.blue(#fff)*114, 1000);
+//
+//    @if abs($color-brightness) < math.div($light-color,2){
+//        @return hsl(0 0% 100%)
+//    }@else{
+//        @return hsl(0 100% 0%)
+//    }
+//}
+.container{
     background-color: darksalmon;
     color: color-contrast(darksalmon);
     display: flex;
