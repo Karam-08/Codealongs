@@ -16,7 +16,7 @@ $font-size:(
     'large': 4rem
 );
 
-@import './partials/list.scss', './partials/nav.scss', './partials/mixin.scss';
+@import './partials/list.scss', './partials/nav.scss', './partials/mixin.scss', './partials/countdown.scss';
 
 .profile{
     @include flexCenter(column);

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Countdown Timer</title>
+    <link rel="stylesheet" href="./styles/css/countdown.css">
+</head>
+<body>
+    <h1>Timer</h1>
+    <div id="timer"></div>
+    <script>
+        // Set the target data and time
+        const targetDate = new Date("2025-02-14T00:00:00")
+
+        // Function to calculate and display the countdown timer
+        function updateCountdown(){
+            const now = new Date(); // Current date
+            const timeDifference = targetDate - now; // Difference (in milliseconds) between current and target date
+
+            if(timeDifference <= 0){
+                document.getElementById("time").innerText = "The time has come"
+                clearInterval(intervalID); // Stop the timer when the targtet date is reached
+                return;
+            }
+
+            // Calculate days, hours, minutes, seconds
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
+            const hours = Math.floor(timeDifference % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+            const minutes = Math.floor(timeDifference % (1000 * 60 * 60) / (1000 * 60))
+            const seconds = Math.floor(timeDifference % (1000 * 60) / 1000)
+
+            // Display the countdown
+            document.getElementById("timer").innerText = `Days: ${days}, Hours ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
+        }
+
+        // Start the timer
+        const intervalID = setInterval(updateCountdown, 1000); // update every second
+
+        // Call the function once immediately to avoid initial delay
+        updateCountdown();
+    </script>
+</body>
+</html>

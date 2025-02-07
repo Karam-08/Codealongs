@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>This is jQuery</h1>
+            <button id="button">#button1</button>
+            <button id="button2">#button2</button>
+            <button id="button3">#button3</button>
+            <button id="button4">#button4</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-1">
+            <div id="panel1" class="panel panel-primary">
+                #panel1
+                <div class="panel-heading1">#panel1-heading</div>
+                <div class="panel-body1">the background is blue and the text is white</div>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <div id="panel2" class="panel panel-primary">
+                #panel2
+                <div class="panel-heading2">#panel2-heading</div>
+                <div class="panel-body2">the background is green and the text is white and the font is bold</div>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            #panel3
+            <div id="panel3" class="panel panel-primary">
+                <div class="panel-heading3">#panel3-heading</div>
+                <div class="panel-body3">the background is darkgey and the text is black and the font family is monospace, including the panel content</div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <p id="p4">#panel4</p>
+            <div id="panel4" class="panel panel-primary">
+                <div class="panel-heading4">#panel4-heading</div>
+                <div class="panel-body4">the panel is white with black text, the heading is blue wioth white text and underlined with bold text, the content is red with white text and serif font</div>
+            </div>
+        </div>
+    </div>
+    Enter name: <input type="text" id="text-input">
+
+    <script>
+        $(".header").css({
+            'background-color': 'grey',
+            'font-family': 'Arial',
+            'text-align': 'center',
+            'margin': '5px',
+            'padding': '5px',
+        })
+
+        $(".header, button").css({
+            'padding': '10px',
+            'font-weight': 'bold',
+            })
+
+        $("#button").css({'background-image': 'linear-gradient(gray, white)'})
+        $("#button2").css({'background-image': 'linear-gradient(gray, white)'})
+        $("#button3").css({'background-image': 'linear-gradient(gray, white)'})
+        $("#button4").css({'background-image': 'linear-gradient(gray, white)'})
+
+        $(".row").css({
+            'display': 'flex',
+            'justify-content': 'space-evenly'
+        })
+
+        $(".col-xs-1").css({
+            'background-color': 'blue',
+            'width': '300px',
+            'height': '300px',
+            'color': 'white',
+            'border': '3px solid cornflowerblue',
+            'font-family': 'Arial'
+        })
+
+        $(".panel-heading1").css({
+            'background-color': 'cornflowerblue',
+            'font-weight': 'bold',
+            'padding': '10px',
+            'height': '35px'
+        })
+
+        $(".panel-body1").css({'padding': '15px'})
+
+        $(".col-xs-2").css({
+            'background-color': 'green',
+            'width': '300px',
+            'height': '300px',
+            'color': 'white',
+            'border': '3px solid cornflowerblue',
+            'font-weight': 'bold',
+            'font-family': 'Arial'
+        })
+
+        $(".panel-heading2").css({
+            'background-color': 'cornflowerblue',
+            'font-weight': 'bold',
+            'padding': '10px',
+            'height': '35px'
+        })
+
+        $(".panel-body2").css({'padding': '15px'})
+
+        $(".col-xs-3").css({
+            'background-color': 'gray',
+            'width': '300px',
+            'height': '300px',
+            'border': '3px solid cornflowerblue',
+            'font-family': 'monospace'
+        })
+
+        $(".panel-heading3").css({
+            'background-color': 'cornflowerblue',
+            'font-weight': 'bold',
+            'padding': '10px',
+            'color': 'white',
+            'font-family': 'Arial',
+            'height': '35px'
+        })
+        
+        $(".panel-body3").css({'padding': '15px'})
+
+        $(".col-xs-4").css({
+            'background-color': 'darkred',
+            'width': '300px',
+            'height': '300px',
+            'color': 'white',
+            'border': '3px solid cornflowerblue'
+        })
+
+        $(".panel-heading4").css({
+            'background-color': 'blue',
+            'font-weight': 'bold',
+            'padding': '10px',
+            'font-family': 'Arial',
+            'text-decoration': 'underline',
+            'height': '35px'
+        })
+
+        $("#p4").css({
+            'margin': '0',
+            'background-color': 'white',
+            'color': 'black',
+        })
+
+        $(".panel-body4").css({'padding': '15px'})
+
+        $(document).ready(function(){ //$().ready(function(){}) OR $(function () {});
+            setInterval(panelAnimation , 0)
+            $("#button").click(function(){
+            //    $("#panel1").fadeOut(5000).delay(1500).fadeIn(2000).fadeTo(2000, .8)
+            //    $(this).css(["background-color", "red"])
+                $("#panel1").toggleClass("darkMode").fadeOut(3000).fadeIn(2000)
+            })  
+            $("#button2").click(function(){
+                $("#panel2").fadeTo(1000, 0.0).fadeTo(2000, 0.8).delay(5000)
+            })
+            $("#button3").click(function(){
+                $("#panel3").animate({
+            //        "font-size": "500px",
+            //        "width": "300px",
+            //        "height": "300px",
+            //        "overflow": "hidden"
+                }, 5000).slideUp(1000).delay(1000).slideDown(1500)
+            })
+            $("#button4").click(function(){
+                $("#panel4").fadeTo(1000, 0.3).slideUp(2000).slideDown(2000).fadeIn(2000, 0.2).fadeIn(2000, 1)
+            })
+            function panelAnimation(){
+            }
+        })
+
+        $("#text-input").keydown(function(event){
+            $("#panel1").css({"background-color": "orange"})
+
+            if(event.key === 'Enter'){
+                $("#panel4").css({"background-color": 'purple'})
+            }
+
+        })
+
+            if(event.which === 'Enter'){
+                $("#panel4").css({"background-color": 'white'})
+            }
+
+        $("#text-input").keyup(function(){
+            $("#panel1").css({"background-color": "blue"})
+        })
+
+    </script>
+</body>
+</html>
+
