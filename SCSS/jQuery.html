@@ -163,17 +163,23 @@
               //  $(".col-xs-4").toggle(1000)
             })  
             $("#button2").click(function(){
-                $(".col-xs-2").toggle(1000)
-                $(".col-xs-3").toggle(1000)
-                $(".col-xs-4").toggle(1000)
+                let panelId = $(this).attr("panelid")
+                $('.panel-heading2' + panelId).html("this changed")
+                // $(".col-xs-2").toggle(1000)
+                // $(".col-xs-3").toggle(1000)
+                // $(".col-xs-4").toggle(1000)
             })
             $("#button3").click(function(){
-                $(".col-xs-1").toggle(1000)
-                $(".col-xs-3").toggle(1000)
+                let panelId = $(this).attr("panelid")
+                $('.panel-heading3' + panelId).html("this changed")
+                // $(".col-xs-1").toggle(1000)
+                // $(".col-xs-3").toggle(1000)
             })
             $("#button4").click(function(){
-                $(".col-xs-1").toggle(1000)
-                $(".col-xs-2").toggle(1000)
+                let panelId = $(this).attr("panelid")
+                $('.panel-heading4' + panelId).html("this changed")
+                // $(".col-xs-1").toggle(1000)
+                // $(".col-xs-2").toggle(1000)
             })
             function panelAnimation(){
             }
