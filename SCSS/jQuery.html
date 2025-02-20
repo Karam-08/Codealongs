@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/css/jQuery.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -48,6 +49,58 @@
         </div>
     </div>
     Enter name: <input type="text" id="text-input">
+
+    <div class="row">
+        <ul class="list">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <ul class="sublist">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <ul class="list">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <ul class="sublist">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <ul class="list">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <ul class="sublist">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    
+    <div class="row">
+        <ul class="list">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <ul class="sublist">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
 
     <script>
         $(".header").css({
@@ -183,6 +236,16 @@
             })
             function panelAnimation(){
             }
+
+            $("ul:hover").css("background-color", "orange")
+            $("button:nth-of-type(3)").css("background-color", "none")
+          // $("li:nth-of-type(3)").css("background-color", "pink")
+          // $("li").eq(2).css("background-color", "purple")
+            
+            $('li').on('click', function(){
+                $(this).addClass('highlight')
+                $(this).siblings().removeClass('highlight')
+            })
         })
 
         $("#text-input").keydown(function(event){
@@ -201,6 +264,8 @@
         $("#text-input").keyup(function(){
             $("#panel1").css({"background-color": "blue"})
         })
+        
+        
 
     </script>
 </body>
