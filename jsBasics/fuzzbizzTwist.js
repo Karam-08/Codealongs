@@ -1,4 +1,4 @@
-for(var i = 1; i < 51; i++){
+for(var i = 1; i < Infinity; i++){
     if(i % 5 === 0 && i % 3 === 0){
         console.log("FizzBuzz");
         continue
