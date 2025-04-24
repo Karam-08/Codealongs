@@ -45,7 +45,7 @@ for(var i = 0; i < people.length; i++){
 const person2 = {name3: 'Eve', age: 40};
 
 let {name3, age, city = 'Unknown'} = person2
-// Since city is not present in the object, it will be assigned the default value
+// Unknown is the default value if city is not defined in the object
 console.log(name3)
 console.log(age)
 console.log(city)
