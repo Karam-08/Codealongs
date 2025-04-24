@@ -17,8 +17,8 @@
 
 const person1 = {names: 'John', age: 30, city: 'New York'};
 // Assign name to a variable personName, age to a variable personAge, and city to a variable personCity.
-let [personName, personAge, personCity] = person1
-console.log(personAge)
+let {names: personName, age: personAge, city: personCity} = person1
+console.log(personCity)
 // 4: What would be the output of this code?
 
 // const { a, b, c } = { a: 5, b: 10 }; console.log(a, b, c);
@@ -30,8 +30,12 @@ console.log(personAge)
 
 // 5: Given the following array of objects, use destructuring to extract the name and age of each person and log them.
 
-const people = [{name: 'Alice', age: 25, city: 'Paris'}, {name: 'Bob', age: 30, city: 'London'}, {name: 'Charlie', age: 35, city: 'Berlin'}];
+const people = [{names: 'Alice', age: 25, city: 'Paris'}, {names: 'Bob', age: 30, city: 'London'}, {names: 'Charlie', age: 35, city: 'Berlin'}];
 // Use a loop or array method to log the name and age of each person.
+for(var i = 0; i < people.length; i++){
+    let{peopleNames: names, peopleAge: age} = people
+    console.log(peopleNames)
+}
 
 
 // 6: Use destructuring with a default value for the city property in the following object. If city is not present, assign it a default value of 'Unknown'.
