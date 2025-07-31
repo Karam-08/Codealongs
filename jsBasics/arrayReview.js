@@ -83,13 +83,29 @@ console.log('\nOriginal Students array', students)
 console.log('Honor roll students (slice)', honorRoll)
 
 // We'll use a compare function to sort the objects by their 'name' property.
-const studentsCopy = [...students]; // A quick way to make a shallow copy
+// const studentsCopy = [...students]; // A quick way to make a shallow copy
 // studentsCopy.sort((a, b) => {
 //     if(a.name < b.name) return -1;
 //     if(a.name > b.name) return 1;
 //     return 0;
 // });
-array.sort(function(a, b){return b.name-a.name})
-console.log('Sorted: ', array)
-console.log('\nOriginal students array (unchanged)', students);
-console.log('\nStudents sorted alphabetically', studentsCopy)
+// array.sort(function(a, b){return b.name-a.name})
+// console.log('Sorted: ', array)
+// console.log('\nOriginal students array (unchanged)', students);
+// console.log('\nStudents sorted alphabetically', studentsCopy)
+
+
+console.log('\n---Section 4: Bonus Challenge---')
+const studentsCopy2 = [...students]
+studentsCopy2.sort((a, b) =>{
+    if(a.name < b.name) return -1;
+    if(a.name > b.name) return 1;
+    return 0;
+});
+console.log(studentsCopy2)
+organizedStudents = []
+for(var i = 0; i < studentsCopy2.length; i++){
+    organizedStudents.push(studentsCopy2[i].name)
+}
+const seperatedStudents = organizedStudents.join(" | ")
+console.log(seperatedStudents)
